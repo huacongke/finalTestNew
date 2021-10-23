@@ -27,6 +27,8 @@ public class addConsum extends AppCompatActivity {
     Spinner spinnerType,spinnerCate;
     TextView numText,noteText;
 
+    List<AccItem> retList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +84,14 @@ public class addConsum extends AppCompatActivity {
         Log.i(TAG, "clickAdd: 金额="+rmb);
         Log.i(TAG, "clickAdd: 备注="+note);
         Log.i(TAG, "clickAdd: 本次记账的时间="+nowAsIOS);
+
+        retList=new ArrayList<AccItem>();
+        AccItem accItem=new AccItem(strType,strCate,rmb,note,nowAsIOS);
+        retList.add(accItem);
+
+        DBManager dbManager=new DBManager(addConsum.this);
+        dbManager.add(accItem);
+        Log.i(TAG, "db: 添加新的记录");
 
         Intent config=new Intent(this,accountShowActivity.class);
         config.putExtra("accType",strType);

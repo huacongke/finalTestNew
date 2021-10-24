@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="30dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -37,6 +38,7 @@
         android:layout_marginEnd="8dp"
         android:text="TextView"
         android:textSize="23dp"
+        android:gravity="center"
         app:layout_constraintEnd_toStartOf="@+id/showSum"
         app:layout_constraintTop_toBottomOf="@+id/showSum" />
 
@@ -48,6 +50,7 @@
         android:layout_marginTop="24dp"
         android:text="TextView"
         android:textSize="23dp"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/showSum"
         app:layout_constraintTop_toBottomOf="@+id/showSum" />
 
@@ -55,10 +58,11 @@
         android:id="@+id/textGet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="全部收入"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178" />
@@ -67,10 +71,11 @@
         android:id="@+id/textPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="全部支出"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178" />

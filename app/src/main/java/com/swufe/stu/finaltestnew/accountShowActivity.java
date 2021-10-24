@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,12 +18,17 @@ public class accountShowActivity extends AppCompatActivity {
     String type,cate,rmbb,time;
     String r_sum,r_get,r_pay;
     float r_sumf=0.0f,r_getf=0.0f,r_payf=0.0f;
+    TextView allGet,allPay,allSum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_show);
         list2=findViewById(R.id.mylist2);
+        allGet=findViewById(R.id.showGet);
+        allPay=findViewById(R.id.showPay);
+        allSum=findViewById(R.id.showSum);
+
 
 
         Intent intent=getIntent();
@@ -83,28 +89,10 @@ public class accountShowActivity extends AppCompatActivity {
                 new int[]{R.id.showType,R.id.showCate,R.id.showNum,R.id.showTime,R.id.showNote}
         );
         list2.setAdapter(listItemAdapter);
-//        String type="",temps="";
-//        float tempf=0.0f;
-//        for(HashMap<String,String> mmap:listItems){
-//            //获得每一项记账的类型和钱数
-//            type=mmap.get("accType");
-//            temps=mmap.get("rmbNum");
-//            tempf=Float.parseFloat(temps);
-//            if(type.equals("收入")){
-//                r_getf+=tempf;
-//                r_sumf+=tempf;
-//            }else {
-//                r_payf+=tempf;
-//                r_sumf-=tempf;
-//            }
-//        }
 
-//        Log.i(TAG, "onCreate: 总共收入="+r_getf);
-//        Log.i(TAG, "onCreate: 总共支出="+r_payf);
-//        Log.i(TAG, "onCreate: 总共结余="+r_sumf);
-
-//        dbManager.deleteAll();
-//        Log.i(TAG, "onCreate: delete db");
+        allSum.setText(String.valueOf(r_sumf));
+        allPay.setText(String.valueOf(r_payf));
+        allGet.setText(String.valueOf(r_getf));
 
 
 

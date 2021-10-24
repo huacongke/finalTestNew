@@ -86,7 +86,7 @@ public class addConsum extends AppCompatActivity {
         Log.i(TAG, "clickAdd: 本次记账的时间="+nowAsIOS);
 
         retList=new ArrayList<AccItem>();
-        AccItem accItem=new AccItem(strType,strCate,rmb,note,nowAsIOS);
+        AccItem accItem=new AccItem(strType,strCate,nowAsIOS,rmb,note);
         retList.add(accItem);
 
         DBManager dbManager=new DBManager(addConsum.this);

@@ -52,4 +52,14 @@ public class DBManager {
         db.close();
         return rateList;
     }
+
+    public void deleteAll(){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete(TBNAME,null,null);
+        db.close();
+    }
+
+//    public AccItem findById(int id){
+//
+//    }
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -98,5 +99,11 @@ public class accountShowActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void clickToAdd(View pic){
+        Intent config=new Intent(this,addConsum.class);
+        startActivity(config);
+        startActivityForResult(config,2);//code填任意整数,相当于给不同窗口的编号
     }
 }

@@ -53,6 +53,7 @@ public class addConsum extends AppCompatActivity {
     }
 
     public void clickAdd(View pic){
+
 //        Intent config=new Intent(this,addConsum.class);
 //
 //        //startActivity(config);
@@ -90,13 +91,14 @@ public class addConsum extends AppCompatActivity {
         retList.add(accItem);
 
         DBManager dbManager=new DBManager(addConsum.this);
+//        dbManager.deleteAll();
         dbManager.add(accItem);
         Log.i(TAG, "db: 添加新的记录");
 
         Intent config=new Intent(this,accountShowActivity.class);
         config.putExtra("accType",strType);
         config.putExtra("accRate",strCate);
-        config.putExtra("rmbNum", rmb);
+        config.putExtra("rmbNum", "¥"+rmb);
         config.putExtra("accTime", nowAsIOS);
 
         startActivity(config);

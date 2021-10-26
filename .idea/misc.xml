@@ -7,10 +7,17 @@
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/drawable/spingarr.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/drawable/underline.xml" value="0.20104166666666667" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_account_show.xml" value="0.264" />
-        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_add_consum.xml" value="0.2597864768683274" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_add_consum.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_analy.xml" value="0.16197916666666667" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_cal_rate.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_day_detail.xml" value="0.19701086956521738" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_main.xml" value="0.14114583333333333" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_pie_chart.xml" value="0.17447916666666666" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_pie_charts.xml" value="0.19701086956521738" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_rate_list.xml" value="0.23867753623188406" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/activity_show_detail.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/content_scrolling.xml" value="0.19701086956521738" />
+        <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/list_ana_item.xml" value="0.16197916666666667" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/list_item_account.xml" value="0.14114583333333333" />
         <entry key="..\:/AndroidStudioProjects/finalTestNew/app/src/main/res/layout/list_item_rate.xml" value="0.2" />
       </map>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnalyActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-36dp">
+
+        <TextView
+            android:id="@+id/textAnaMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="TextView"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.191"
+        tools:layout_editor_absoluteX="2dp">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="支出类目排行"
+            android:textColor="@color/black"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="#F7AB00"
+            android:text="TextView" />
+
+        <ListView
+            android:id="@+id/mylist4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.575">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="收入类目排行"
+            android:textColor="@color/black"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="#F7AB00"
+            android:text="TextView" />
+
+        <ListView
+            android:id="@+id/mylist5"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.97"
+        tools:layout_editor_absoluteX="2dp">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ana" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="clickAnaToAdd"
+            app:srcCompat="@drawable/add" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:onClick="clickAnaToDe"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/details" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

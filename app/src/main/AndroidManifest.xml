@@ -13,6 +13,42 @@
         android:theme="@style/Theme.FinalTestNew"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".AnalyActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swufe.stu.finaltestnew.RateListActivity" />
+        </activity>
+        <activity
+            android:name=".dayDetailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swufe.stu.finaltestnew.RateListActivity" />
+        </activity>
+        <activity
+            android:name=".showDetailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swufe.stu.finaltestnew.RateListActivity" />
+        </activity>
+        <activity
             android:name=".accountShowActivity"
             android:exported="true">
             <intent-filter>
@@ -20,6 +56,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swufe.stu.finaltestnew.RateListActivity" />
         </activity>
         <activity
             android:name=".addConsum"
@@ -29,6 +68,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swufe.stu.finaltestnew.RateListActivity" />
         </activity>
         <activity
             android:name=".CalRateActivity"
@@ -42,6 +85,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swufe.stu.finaltestnew.RateListActivity" />
         </activity>
         <activity
             android:name=".MainActivity"

@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,6 +38,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="23dp"
         android:gravity="center"
         app:layout_constraintEnd_toStartOf="@+id/showSum"
@@ -49,6 +51,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="23dp"
         android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/showSum"
@@ -80,18 +83,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="79dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994"
-        android:onClick="clickToAdd"
-        app:srcCompat="@drawable/add" />
-
     <TextView
         android:id="@+id/textSum"
         android:layout_width="wrap_content"
@@ -104,27 +95,40 @@
         app:layout_constraintTop_toTopOf="@+id/showSum"
         app:layout_constraintVertical_bias="0.063" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="79dp"
-        android:layout_height="58dp"
+    <LinearLayout
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/search" />
+        app:layout_constraintTop_toTopOf="@+id/showSum"
+        app:layout_constraintVertical_bias="0.98">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="79dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/details" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="clickToANa"
+            app:srcCompat="@drawable/ana" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:onClick="clickToAdd"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/add" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:onClick="clickToDetail"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/details" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

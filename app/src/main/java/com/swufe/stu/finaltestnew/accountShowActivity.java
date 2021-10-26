@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -16,8 +17,7 @@ import java.util.HashMap;
 public class accountShowActivity extends AppCompatActivity {
     private static final String TAG="MyAccShow";
     ListView list2;
-    String type,cate,rmbb,time;
-    String r_sum,r_get,r_pay;
+
     float r_sumf=0.0f,r_getf=0.0f,r_payf=0.0f;
     TextView allGet,allPay,allSum;
 
@@ -25,6 +25,7 @@ public class accountShowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_show);
+
         list2=findViewById(R.id.mylist2);
         allGet=findViewById(R.id.showGet);
         allPay=findViewById(R.id.showPay);
@@ -52,7 +53,7 @@ public class accountShowActivity extends AppCompatActivity {
             HashMap<String,String> map=new HashMap<String,String>();
             map.put("accType",accItem.getCurType());
             map.put("accCate",accItem.getCurCate());
-            map.put("rmbNum", accItem.getCurRmb());
+            map.put("rmbNum", "¥"+accItem.getCurRmb());
             map.put("accTime", accItem.getCurTime());
             map.put("accNote", accItem.getCurNote());
             listItems.add(map);
@@ -91,9 +92,9 @@ public class accountShowActivity extends AppCompatActivity {
         );
         list2.setAdapter(listItemAdapter);
 
-        allSum.setText(String.valueOf(r_sumf));
-        allPay.setText(String.valueOf(r_payf));
-        allGet.setText(String.valueOf(r_getf));
+        allSum.setText("¥"+String.valueOf(r_sumf));
+        allPay.setText("¥-"+String.valueOf(r_payf));
+        allGet.setText("¥"+String.valueOf(r_getf));
 
 
 
@@ -106,4 +107,20 @@ public class accountShowActivity extends AppCompatActivity {
         startActivity(config);
         startActivityForResult(config,2);//code填任意整数,相当于给不同窗口的编号
     }
+
+    public  void clickToDetail(View pic){
+        Intent config=new Intent(this,showDetailActivity.class);
+        startActivity(config);
+        startActivityForResult(config,3);//code填任意整数,相当于给不同窗口的编号
+
+    }
+
+    public  void clickToANa(View pic){
+        Intent config=new Intent(this,AnalyActivity.class);
+        startActivity(config);
+        startActivityForResult(config,6);//code填任意整数,相当于给不同窗口的编号
+
+    }
+
+
 }

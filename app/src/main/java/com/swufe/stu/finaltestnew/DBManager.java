@@ -59,7 +59,28 @@ public class DBManager {
         db.close();
     }
 
-//    public AccItem findById(int id){
-//
-//    }
+    public List<AccItem> findByDate(String date){
+        SQLiteDatabase db=dbHelper.getReadableDatabase();
+        Cursor cursor=db.query(TBNAME, null, "CURTIME=?", new String[]{date}, null, null, null);
+
+        List<AccItem> rateList = null;
+        if(cursor!=null){
+            rateList = new ArrayList<AccItem>();
+            while (cursor.moveToNext()){
+                AccItem item=new AccItem();
+                item.setId(cursor.getInt(0));
+                item.setCurType(cursor.getString(1));
+                item.setCurCate(cursor.getString(2));
+                item.setCurTime(cursor.getString(3));
+                item.setCurRmb(cursor.getString(4));
+                item.setCurNote(cursor.getString(5));
+
+                rateList.add(item);
+            }
+            cursor.close();
+
+        }
+        db.close();
+        return rateList;
+    }
 }

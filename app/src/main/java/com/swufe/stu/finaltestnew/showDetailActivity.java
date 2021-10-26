@@ -103,7 +103,10 @@ public class showDetailActivity extends AppCompatActivity{
             HashMap<String,String> map=new HashMap<String,String>();
             map.put("accType",accItem.getCurType());
             map.put("accCate",accItem.getCurCate());
-            map.put("rmbNum", accItem.getCurRmb());
+            if(accItem.getCurType().equals("收入"))
+                map.put("rmbNum", "¥"+accItem.getCurRmb());
+            else
+                map.put("rmbNum", "¥-"+accItem.getCurRmb());
             map.put("accTime", accItem.getCurTime());
             map.put("accNote", accItem.getCurNote());
             listItems.add(map);

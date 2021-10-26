@@ -91,6 +91,7 @@ public class addConsum extends AppCompatActivity {
         retList.add(accItem);
 
         DBManager dbManager=new DBManager(addConsum.this);
+//        删除数据库中的内容
 //        dbManager.deleteAll();
         dbManager.add(accItem);
         Log.i(TAG, "db: 添加新的记录");

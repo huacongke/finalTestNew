@@ -55,7 +55,7 @@ public class AnalyActivity extends AppCompatActivity {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         df.setTimeZone(tz);
         String nowAs = df.format(date);
-        Log.i(TAG, "onCreate: time="+nowAs.split("-")[1]);
+        Log.i(TAG, "onCreate: 月份="+nowAs.split("-")[1]);
         text.setText(nowAs.split("-")[1]+"月的账目统计");
 
         DBManager dbManager=new DBManager(AnalyActivity.this);
@@ -79,8 +79,8 @@ public class AnalyActivity extends AppCompatActivity {
                     mapPayMoney.put(cate, rmb_temp);
                 }
 
-                Log.i(TAG, "onCreate:向hashmap中添加："+cate+"==>"+1+num);
-                Log.i(TAG, "onCreate: 向hashmap中添加："+cate+"==>"+rmb_temp+rmb);
+                Log.i(TAG, "onCreate:向mapPayNum中添加："+type+cate+"==>"+String.valueOf(1+num));
+                Log.i(TAG, "onCreate: 向mapPayMoney中添加："+type+cate+"==>"+String.valueOf(rmb_temp+rmb));
 
             }else {
                 cate=item.getCurCate();
@@ -94,6 +94,8 @@ public class AnalyActivity extends AppCompatActivity {
                     mapGetNum.put(cate, 1);
                     mapGetMoney.put(cate, rmb_temp);
                 }
+                Log.i(TAG, "onCreate:向mapGetNum中添加："+type+cate+"==>"+String.valueOf(1+num));
+                Log.i(TAG, "onCreate: 向mapGetMoney中添加："+type+cate+"==>"+String.valueOf(rmb_temp+rmb));
 
             }
 
@@ -103,12 +105,12 @@ public class AnalyActivity extends AppCompatActivity {
         for(String key:mapPayNum.keySet()){
             HashMap<String,String> map=new HashMap<String,String>();
             numP=mapPayNum.get(key);
-            Log.i(TAG, "onCreate: numP="+numP);
+            Log.i(TAG, "onCreate:"+key+"支出"+numP+"笔");
             map.put("cateP",key);
-            Log.i(TAG, "onCreate: 从map中取值="+map.get("cateP"));
+//            Log.i(TAG, "onCreate: 从map中取值="+map.get("cateP"));
             map.put("cateNumP", "支出"+String.valueOf(numP)+"笔");
             rmbP=mapPayMoney.get(key);
-            Log.i(TAG, "onCreate: rmbP="+rmbP);
+            Log.i(TAG, "onCreate:"+key+"支出"+"¥"+rmbP);
             map.put("moneyP","-¥"+String.valueOf(rmbP));
             listItemsP.add(map);
         }
@@ -117,9 +119,11 @@ public class AnalyActivity extends AppCompatActivity {
         for (String key:mapGetNum.keySet()){
             HashMap<String,String> map=new HashMap<String,String>();
             numG=mapGetNum.get(key);
+            Log.i(TAG, "onCreate:"+key+"收入"+numG+"笔");
             map.put("cateG", key);
             map.put("cateNumG", "收入"+String.valueOf(numG)+"笔");
             rmbG=mapGetMoney.get(key);
+            Log.i(TAG, "onCreate:"+key+"收入"+"¥"+rmbG);
             map.put("moneyG", "¥"+String.valueOf(rmbG));
             listItemsG.add(map);
         }

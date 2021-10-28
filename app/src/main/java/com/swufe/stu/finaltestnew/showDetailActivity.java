@@ -73,7 +73,7 @@ public class showDetailActivity extends AppCompatActivity{
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                Log.i(TAG, "onDateSet: date: " + year + "/" + month + "/" + dayOfMonth);
+                Log.i(TAG, "onDateSet: 用户所选日期date: " + year + "/" + month + "/" + dayOfMonth);
                 int rm = month + 1;
                 mDateShow.setText(year + "/" + rm + "/" + dayOfMonth);
             }
@@ -127,6 +127,7 @@ public class showDetailActivity extends AppCompatActivity{
         showDaySum.setText("¥"+String.valueOf(r_sumf));
         showDayGet.setText("¥"+String.valueOf(r_getf));
         showDayPay.setText("¥"+"-"+r_payf);
+        Log.i(TAG, ex_time+"账目情况:结余:"+r_sumf+"收入:"+r_getf+"支出:"+r_payf);
 
         //每一月
         for(AccItem accItem:dbManager.listAll()){
@@ -149,6 +150,7 @@ public class showDetailActivity extends AppCompatActivity{
         showMonSum.setText("¥"+String.valueOf(r_sumM));
         showMonGet.setText("¥"+String.valueOf(r_getM));
         showMonPay.setText("¥"+"-"+r_payM);
+        Log.i(TAG, times.split("-")[1]+"月账目情况:结余:"+r_sumM+"收入:"+r_getM+"支出:"+r_payM);
 
         //每一年
         for(AccItem accItem:dbManager.listAll()){
@@ -172,6 +174,7 @@ public class showDetailActivity extends AppCompatActivity{
         showYGet.setText("¥"+String.valueOf(r_getY));
         showYPay.setText("¥"+"-"+r_payY);
 
+        Log.i(TAG, times.split("-")[0]+"月账目情况:结余:"+r_sumY+"收入:"+r_getY+"支出:"+r_payY);
 
 
 
@@ -209,6 +212,8 @@ public class showDetailActivity extends AppCompatActivity{
         Intent config=new Intent(this,dayDetailActivity.class);
         config.putExtra("ArrList", listItems);
         config.putExtra("Time", ex_time);
+
+        Log.i(TAG, "clickToDe: 跳转至“所选日期账目记录”页面");
 
         startActivity(config);
         startActivityForResult(config,5);//code填任意整数,相当于给不同窗口的编号
